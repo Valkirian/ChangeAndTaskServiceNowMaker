@@ -14,14 +14,15 @@ import csv
 from datetime import timedelta, date
 import json
 
+# Modificar los parametros de instance, user, password
 # Parameters
-url_sn_to_make_change = "https://synapsis.service-now.com/api/now/table/change_request"
-url_sn_to_make_task = "https://synapsis.service-now.com/api/now/table/change_task"
-url_sn_lists_changes = "https://synapsis.service-now.com/api/now/table/change_request?sysparm_query=active = true^stateNOT IN8, 3, 4^sys_created_byLIKErachid^ORsys_created_byLIKEbrayan"
-url_sn_lists_task = "https://synapsis.service-now.com/api/now/table/change_task?sysparm_query=active = true ^ opened_byLIKERachid Moyse Polania ^ ORopened_byLIKEArthur Brayan Gallo Obando"
+url_sn_to_make_change = "https://{instance}.service-now.com/api/now/table/change_request"
+url_sn_to_make_task = "https://{instance}.service-now.com/api/now/table/change_task"
+url_sn_lists_changes = "https://{instance}.service-now.com/api/now/table/change_request?sysparm_query=active = true^stateNOT IN8, 3, 4^sys_created_byLIKErachid^ORsys_created_byLIKEbrayan"
+url_sn_lists_task = "https://{instance}.service-now.com/api/now/table/change_task?sysparm_query=active = true ^ opened_byLIKERachid Moyse Polania ^ ORopened_byLIKEArthur Brayan Gallo Obando"
 headers = {"Accept": "application/xml"}
-user = 'rachid.moyse'
-passwd = "Skills39**"
+user = 'username'
+passwd = "password"
 number = ""
 root = tk.Tk("Archivo Nessus")
 root.withdraw()
